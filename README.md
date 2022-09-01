@@ -1,7 +1,5 @@
 # SearchUnify SDK
 
-[![NPM](https://nodei.co/npm/su-sdk.png?downloads=true&downloadRank=true)](https://nodei.co/npm/su-sdk/)
-
 ## Overview
 The SearchUnify SDK for Java enabled Java developers to easily work with the SearchUnify platform and build scalable solutions with search, analytics, crawlers and more. You can get started in minutes using Maven or by downloading the JAR file
 The SearchUnify SDK for Java simpliﬁes use of SearchUnify Services by providing a set of libraries that are consistent and familiar for Java developers. It provides support for API lifecycle consideration such as credential management, retries, data marshaling, and serialization. The SearchUnify SDK for Java also supports higher level abstractions for simplified development.
@@ -20,7 +18,7 @@ The recommended way to use the SearchUnify SDK for Java in your project is to co
 <dependencies>
   <dependency>
     <groupId>com.searchunify</groupId>
-    <artifactId>sdk</artifactId>
+    <artifactId>su-sdk</artifactId>
     <version>1.0</version>
   </dependency>
 </dependencies>
