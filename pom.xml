@@ -1,21 +1,44 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.searchunify</groupId>
-	<artifactId>sdk</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>su-sdk</artifactId>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>sdk</name>
-	<url>http://maven.apache.org</url>
+	<name>su-sdk-java</name>
+	<description>The SearchUnify SDK enables developers to easily work with the SearchUnify platform and build scalable solutions 
+	with search, analytics, crawlers and more.</description>
+	<url>https://github.com/searchunify/su-sdk-java</url>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Ankur Mahajan</name>
+			<email>ankur.mahajan@grazitti.com</email>
+			<organization>SearchUnify</organization>
+			<organizationUrl>https://www.searchunify.com</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/searchunify/su-sdk-java.git</connection>
+		<developerConnection>scm:git:ssh://github.com:searchunify/su-sdk-java.git</developerConnection>
+		<url>https://github.com/searchunify/su-sdk-java</url>
+	</scm>
+
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<bundle.symbolicName>com.searchunify</bundle.symbolicName>
 		<bundle.namespace>com.searchunify</bundle.namespace>
-		<lombok-version>1.18.18</lombok-version>
+		<lombok-version>1.18.22</lombok-version>
 		<jackson-version>2.12.2</jackson-version>
 		<junit-version>4.11</junit-version>
 		<okhttp-version>3.2.0</okhttp-version>
