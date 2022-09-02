@@ -1,5 +1,5 @@
 # SearchUnify SDK
-
+[![Maven Central](https://img.shields.io/maven-central/v/com.searchunify/su-sdk.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.searchunify%22%20AND%20a:%22su-sdk%22)
 ## Overview
 The SearchUnify SDK for Java enabled Java developers to easily work with the SearchUnify platform and build scalable solutions with search, analytics, crawlers and more. You can get started in minutes using Maven or by downloading the JAR file
 The SearchUnify SDK for Java simpliﬁes use of SearchUnify Services by providing a set of libraries that are consistent and familiar for Java developers. It provides support for API lifecycle consideration such as credential management, retries, data marshaling, and serialization. The SearchUnify SDK for Java also supports higher level abstractions for simplified development.
