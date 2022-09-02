@@ -43,6 +43,11 @@ public class App {
 }
 ```
 The access token will expire after 4 hours and you need to refresh that.
+
+## Documentation
+Please refer to the SearchUnify developer guide to use the SDK.
+https://docs-dev.searchunify.com/Content/Developer-Guides/SDKs-Java.htm
+
 ## License
 
 MIT
