@@ -8,8 +8,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * @author ankur
- * @crated 26-Mar-2021
+ * This class is @author ankur
+ * This class is created at 26-Mar-2021
  */
 @Getter
 @Setter

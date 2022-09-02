@@ -4,8 +4,8 @@
 package com.searchunify.sdk.exceptions;
 
 /**
- * @author ankur
- * @crated 22-Mar-2021
+ * This class is @author ankur
+ * This class is created at 22-Mar-2021
  */
 public class SearchUnifyException extends RuntimeException {
 
@@ -21,30 +21,30 @@ public class SearchUnifyException extends RuntimeException {
 	}
 
 	/**
-	 * @param responseCode
+	 * Parameters @param responseCode
 	 */
 	public void setResponseCode(final int responseCode) {
 		this.responseCode = responseCode;
 	}
 
 	/**
-	 * @param message
+	 * Parameters @param message
 	 */
 	public SearchUnifyException(final String message) {
 		super(message);
 	}
 
 	/**
-	 * @param message
-	 * @param cause
+	 * Parameters @param message
+	 * Parameters @param cause
 	 */
 	public SearchUnifyException(final String message, final Throwable cause) {
 		super(message, cause);
 	}
 
 	/**
-	 * @param message
-	 * @param responseCode
+	 * Parameters @param message
+	 * Parameters @param responseCode
 	 */
 	public SearchUnifyException(final String message, final int responseCode) {
 		super(message);
@@ -52,9 +52,9 @@ public class SearchUnifyException extends RuntimeException {
 	}
 
 	/**
-	 * @param message
-	 * @param cause
-	 * @param responseCode
+	 * Parameters @param message
+	 * Parameters @param cause
+	 * Parameters @param responseCode
 	 */
 	public SearchUnifyException(final String message, final Throwable cause, final int responseCode) {
 		super(message, cause);

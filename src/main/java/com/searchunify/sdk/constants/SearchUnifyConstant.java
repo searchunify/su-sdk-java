@@ -6,8 +6,8 @@ package com.searchunify.sdk.constants;
 import okhttp3.MediaType;
 
 /**
- * @author ankur
- * @crated 23-Mar-2021
+ * This class is @author ankur
+ * This class is created at 23-Mar-2021
  */
 public class SearchUnifyConstant {
 

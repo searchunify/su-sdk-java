@@ -4,8 +4,8 @@
 package com.searchunify.sdk.utils;
 
 /**
- * @author ankur
- * @crated 16-Jun-2021
+ * This class is @author ankur
+ * This class is created at 16-Jun-2021
  */
 public class ClientUtils {
 

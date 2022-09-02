@@ -8,17 +8,16 @@ import java.util.Map;
 import com.searchunify.sdk.constants.HttpMethod;
 
 /**
- * @author ankur
- * @crated 19-Mar-2021
+ * This class is @author ankur This class is created at 19-Mar-2021
  */
 public class RestClient {
 
 	/**
 	 * This method is used to send get request.
 	 * 
-	 * @param context
-	 * @param headers
-	 * @param parameters
+	 * Parameters @param context Parameters @param headers Parameters @param
+	 * parameters
+	 * 
 	 * @return {@link String}
 	 */
 	public static String get(String context, Map<String, String> headers, Map<String, String> parameters) {
@@ -31,10 +30,9 @@ public class RestClient {
 	/**
 	 * This method is used to send post request.
 	 * 
-	 * @param context
-	 * @param body
-	 * @param headers
-	 * @param parameters
+	 * Parameters @param context Parameters @param body Parameters @param headers
+	 * Parameters @param parameters
+	 * 
 	 * @return {@link String}
 	 */
 	public static String post(String context, String body, Map<String, String> headers,
@@ -48,10 +46,9 @@ public class RestClient {
 	/**
 	 * This method is used to send put request.
 	 * 
-	 * @param context
-	 * @param body
-	 * @param headers
-	 * @param parameters
+	 * Parameters @param context Parameters @param body Parameters @param headers
+	 * Parameters @param parameters
+	 * 
 	 * @return {@link String}
 	 */
 	public static String put(String context, String body, Map<String, String> headers, Map<String, String> parameters) {
@@ -64,10 +61,9 @@ public class RestClient {
 	/**
 	 * This method is used to send delete request.
 	 * 
-	 * @param context
-	 * @param body
-	 * @param headers
-	 * @param parameters
+	 * Parameters @param context Parameters @param body Parameters @param headers
+	 * Parameters @param parameters
+	 * 
 	 * @return {@link String}
 	 */
 	public static String delete(String context, String body, Map<String, String> headers,

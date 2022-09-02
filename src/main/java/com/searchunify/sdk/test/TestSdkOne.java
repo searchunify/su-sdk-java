@@ -19,8 +19,8 @@ import com.searchunify.sdk.dtos.TileDataResponse;
 import lombok.NonNull;
 
 /**
- * @author ankur
- * @crated 22-Mar-2021
+ * This class is @author ankur
+ * This class is created at 22-Mar-2021
  */
 public class TestSdkOne {
 
@@ -48,7 +48,7 @@ public class TestSdkOne {
 	}
 
 	/**
-	 * @param args
+	 * Parameters @param args
 	 * @throws ParseException
 	 */
 	public static void main(String[] args) throws ParseException {

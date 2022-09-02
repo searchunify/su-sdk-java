@@ -4,8 +4,8 @@
 package com.searchunify.sdk.constants;
 
 /**
- * @author ankur
- * @crated 08-Jun-2021
+ * This class is @author ankur
+ * This class is created at 08-Jun-2021
  */
 public enum Media {
 
@@ -25,7 +25,7 @@ public enum Media {
 	/**
 	 * Use this in place of valueOf.
 	 *
-	 * @param value real value
+	 * Parameters @param value real value
 	 * @return UserType corresponding to the value
 	 * @throws IllegalArgumentException
 	 */

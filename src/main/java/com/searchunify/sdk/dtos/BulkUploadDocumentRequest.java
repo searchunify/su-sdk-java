@@ -12,8 +12,8 @@ import lombok.NonNull;
 import lombok.Setter;
 
 /**
- * @author ankur
- * @crated 15-Jun-2021
+ * This class is @author ankur
+ * This class is created at 15-Jun-2021
  */
 @Getter
 @Setter

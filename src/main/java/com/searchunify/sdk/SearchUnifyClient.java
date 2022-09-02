@@ -80,8 +80,8 @@ import com.searchunify.sdk.utils.JsonUtils;
 import lombok.NonNull;
 
 /**
- * @author ankur
- * @crated 19-Mar-2021
+ * This class is @author ankur
+ * This class is created at 19-Mar-2021
  */
 
 public class SearchUnifyClient {
@@ -107,9 +107,9 @@ public class SearchUnifyClient {
 	private RequestManager requestManager;
 
 	/**
-	 * @param key
-	 * @param secret
-	 * @param baseContext
+	 * Parameters @param key
+	 * Parameters @param secret
+	 * Parameters @param baseContext
 	 */
 	public SearchUnifyClient(@NonNull String key, @NonNull String secret, @NonNull String baseContext,
 			@NonNull String username, @NonNull String password, String grantType) {
@@ -131,8 +131,8 @@ public class SearchUnifyClient {
 	/**
 	 * This method is used to append the authorization header in the request.
 	 * 
-	 * @param <R>
-	 * @param request
+	 * Parameters @param <R>
+	 * Parameters @param request
 	 * @return R
 	 */
 	private <R extends SearchUnifyRequest> R addAuthHeader(@NonNull R request) {
@@ -150,7 +150,7 @@ public class SearchUnifyClient {
 	 * This method is used for get access token. Internally this sends the data as
 	 * form URL encoded way.
 	 * 
-	 * @param request {@link GenerateTokenRequest}
+	 * Parameters @param request {@link GenerateTokenRequest}
 	 * @return {@link GenerateTokenResponse}
 	 */
 	public GenerateTokenResponse generateAccessToken(@NonNull GenerateTokenRequest request) {
@@ -184,7 +184,7 @@ public class SearchUnifyClient {
 	/**
 	 * This method is used to get the tile data from SearchUnify analytics.
 	 * 
-	 * @param {@link TileDataRequest}
+	 * Parameters @param {@link TileDataRequest}
 	 * @return {@link TileDataResponse}
 	 */
 	public TileDataResponse getTileData(@NonNull TileDataRequest request) {
@@ -199,7 +199,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the search summary chart data from SearchUnify
 	 * analytics.
 	 * 
-	 * @param request {@link GetSearchSummaryChartRequest}
+	 * Parameters @param request {@link GetSearchSummaryChartRequest}
 	 * @return {@link GetSearchSummaryChartResponse}
 	 */
 	public GetSearchSummaryChartResponse getSearchSummaryChart(@NonNull GetSearchSummaryChartRequest request) {
@@ -214,7 +214,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all search query report from SearchUnify
 	 * analytics.
 	 * 
-	 * @param request {@link GetSearchQueryAllRequest}
+	 * Parameters @param request {@link GetSearchQueryAllRequest}
 	 * @return {@link GetSearchQueryAllResponse}
 	 */
 	public GetSearchQueryAllResponse getSearchQueryAll(@NonNull GetSearchQueryAllRequest request) {
@@ -231,7 +231,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all the search queries with results from
 	 * SearchUnify analytics.
 	 * 
-	 * @param request {@link GetSearchQueryWithResultsRequest}
+	 * Parameters @param request {@link GetSearchQueryWithResultsRequest}
 	 * @return {@link GetSearchQueryWithResultsResponse}
 	 */
 	public GetSearchQueryWithResultsResponse getSearchQueryWithResults(
@@ -249,7 +249,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all the search queries with no clicks from
 	 * SearchUnify analytics.
 	 * 
-	 * @param request {@link GetSearchQueryWithNoClicksRequest}
+	 * Parameters @param request {@link GetSearchQueryWithNoClicksRequest}
 	 * @return {@link GetSearchQueryWithResultsResponse}
 	 */
 	public GetSearchQueryWithNoClicksResponse getSearchQueryWithNoClicks(
@@ -267,7 +267,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all the search queries without results from
 	 * SearchUnify analytics.
 	 * 
-	 * @param request {@link GetSearchQueryWithoutResultsRequest}
+	 * Parameters @param request {@link GetSearchQueryWithoutResultsRequest}
 	 * @return {@link GetSearchQueryWithoutResultsResponse}
 	 */
 	public GetSearchQueryWithoutResultsResponse getSearchQueryWithoutResults(
@@ -285,7 +285,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the search query histogram from SearchUnify
 	 * analytics.
 	 * 
-	 * @param request {@link SearchQueryHistogramRequest}
+	 * Parameters @param request {@link SearchQueryHistogramRequest}
 	 * @return {@link SearchQueryHistogramResponse}
 	 */
 	public SearchQueryHistogramResponse searchQueryHistogram(@NonNull SearchQueryHistogramRequest request) {
@@ -300,7 +300,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the search missed query histogram from SearchUnify
 	 * analytics.
 	 * 
-	 * @param request {@link SearchQueryMissedHistogramRequest}
+	 * Parameters @param request {@link SearchQueryMissedHistogramRequest}
 	 * @return {@link SearchQueryMissedHistogramResponse}
 	 */
 	public SearchQueryMissedHistogramResponse searchQueryMissedHistogram(
@@ -316,7 +316,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the search session by the case uid from
 	 * SearchUnify analytics.
 	 * 
-	 * @param request {@link SearchSessionByCaseUidAuthRequest}
+	 * Parameters @param request {@link SearchSessionByCaseUidAuthRequest}
 	 * @return {@link SearchSessionByCaseUidAuthResponse}
 	 */
 	public SearchSessionByCaseUidAuthResponse searchSessionByCaseUidAuth(
@@ -332,7 +332,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all the search conversions from SearchUnify
 	 * analytics.
 	 * 
-	 * @param request {@link GetSearchConverionAllRequest}
+	 * Parameters @param request {@link GetSearchConverionAllRequest}
 	 * @return {@link GetSearchConverionAllResponse}
 	 */
 	public GetSearchConverionAllResponse getSearchConverionAll(@NonNull GetSearchConverionAllRequest request) {
@@ -349,7 +349,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all the search conversions which are not on first
 	 * page from SearchUnify analytics.
 	 * 
-	 * @param request {@link GetSearchConverionNotOnFirstPageRequest}
+	 * Parameters @param request {@link GetSearchConverionNotOnFirstPageRequest}
 	 * @return {@link GetSearchConverionNotOnFirstPageResponse}
 	 */
 	public GetSearchConverionNotOnFirstPageResponse getSearchConverionNotOnFirstPage(
@@ -367,7 +367,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all the search conversions with filters from
 	 * SearchUnify analytics.
 	 * 
-	 * @param request {@link GetSearchConverionWithFilterRequest}
+	 * Parameters @param request {@link GetSearchConverionWithFilterRequest}
 	 * @return {@link GetSearchConverionWithFilterResponse}
 	 */
 	public GetSearchConverionWithFilterResponse getSearchConverionWithFilter(
@@ -385,7 +385,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all the search conversions by session id from
 	 * SearchUnify analytics.
 	 * 
-	 * @param request {@link GetSearchConverionBySessionIdRequest}
+	 * Parameters @param request {@link GetSearchConverionBySessionIdRequest}
 	 * @return {@link GetSearchConverionBySessionIdResponse}
 	 */
 	public GetSearchConverionBySessionIdResponse getSearchConverionBySessionId(
@@ -408,7 +408,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the search conversion discussion that are ready to
 	 * become help articles from SearchUnify analytics.
 	 * 
-	 * @param request {@link DiscussionsReadyToBecomeArticlesRequest}
+	 * Parameters @param request {@link DiscussionsReadyToBecomeArticlesRequest}
 	 * @return {@link DiscussionsReadyToBecomeArticlesResponse}
 	 */
 	public DiscussionsReadyToBecomeArticlesResponse discussionsReadyToBecomeArticles(
@@ -424,7 +424,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the search conversion articles that are created
 	 * articles from SearchUnify analytics.
 	 * 
-	 * @param request {@link ArticlesCreatedCasesRequest}
+	 * Parameters @param request {@link ArticlesCreatedCasesRequest}
 	 * @return {@link ArticlesCreatedCasesResponse}
 	 */
 	public ArticlesCreatedCasesResponse articlesCreatedCases(@NonNull ArticlesCreatedCasesRequest request) {
@@ -439,7 +439,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the search conversion articles that deflected
 	 * cases from SearchUnify analytics.
 	 * 
-	 * @param request {@link ArticlesDeflectedCaseRequest}
+	 * Parameters @param request {@link ArticlesDeflectedCaseRequest}
 	 * @return {@link ArticlesDeflectedCaseResponse}
 	 */
 	public ArticlesDeflectedCaseResponse articlesDeflectedCase(@NonNull ArticlesDeflectedCaseRequest request) {
@@ -454,7 +454,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the search conversion articles that are attached
 	 * to cases from SearchUnify analytics.
 	 * 
-	 * @param request {@link ArticlesAttachedToCasesRequest}
+	 * Parameters @param request {@link ArticlesAttachedToCasesRequest}
 	 * @return {@link ArticlesAttachedToCasesResponse}
 	 */
 	public ArticlesAttachedToCasesResponse articlesAttachedToCases(@NonNull ArticlesAttachedToCasesRequest request) {
@@ -471,7 +471,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all the searches with no clicks from SearchUnify
 	 * analytics.
 	 * 
-	 * @param request {@link GetSearchesWithNoClicksRequest}
+	 * Parameters @param request {@link GetSearchesWithNoClicksRequest}
 	 * @return {@link GetSearchesWithNoClicksResponse}
 	 */
 	public GetSearchesWithNoClicksResponse getSearchesWithNoClicks(@NonNull GetSearchesWithNoClicksRequest request) {
@@ -488,7 +488,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the searches based on the search sessions from
 	 * SearchUnify analytics.
 	 * 
-	 * @param request {@link GetSearchesInAllSessionRequest}
+	 * Parameters @param request {@link GetSearchesInAllSessionRequest}
 	 * @return {@link GetSearchesInAllSessionResponse}
 	 */
 	public GetSearchesInAllSessionResponse getSearchesInAllSession(@NonNull GetSearchesInAllSessionRequest request) {
@@ -505,7 +505,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all the search sessions by session id from
 	 * SearchUnify analytics.
 	 * 
-	 * @param request {@link GetSearchSessionBySessionIdRequest}
+	 * Parameters @param request {@link GetSearchSessionBySessionIdRequest}
 	 * @return {@link GetSearchSessionBySessionIdResponse}
 	 */
 	public GetSearchSessionBySessionIdResponse getSearchSessionBySessionId(
@@ -528,7 +528,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the searches that become KCS support from
 	 * SearchUnify analytics.
 	 * 
-	 * @param request {@link SearchQueryKcsSupportRequest}
+	 * Parameters @param request {@link SearchQueryKcsSupportRequest}
 	 * @return {@link SearchQueryKcsSupportResponse}
 	 */
 	public SearchQueryKcsSupportResponse searchQueryKcsSupport(@NonNull SearchQueryKcsSupportRequest request) {
@@ -543,7 +543,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the search sessions by case UID from SearchUnify
 	 * analytics.
 	 * 
-	 * @param request {@link SearchSessionByCaseUidRequest}
+	 * Parameters @param request {@link SearchSessionByCaseUidRequest}
 	 * @return {@link SearchSessionByCaseUidResponse}
 	 */
 	public SearchSessionByCaseUidResponse searchSessionByCaseUid(@NonNull SearchSessionByCaseUidRequest request) {
@@ -557,7 +557,7 @@ public class SearchUnifyClient {
 	/**
 	 * This method is used to get the search results based on the queries.
 	 * 
-	 * @param request {@link SearchRequest}
+	 * Parameters @param request {@link SearchRequest}
 	 * @return {@link SearchResponse}
 	 */
 	public SearchResponse search(@NonNull SearchRequest request) {
@@ -572,7 +572,7 @@ public class SearchUnifyClient {
 	/**
 	 * This method is used to get all the content sources.
 	 * 
-	 * @param request {@link GetAllContentSourcesRequest}
+	 * Parameters @param request {@link GetAllContentSourcesRequest}
 	 * @return {@link GetAllContentSourcesResponse}
 	 */
 	public GetAllContentSourcesResponse getAllContentSources(@NonNull GetAllContentSourcesRequest request) {
@@ -586,7 +586,7 @@ public class SearchUnifyClient {
 	/**
 	 * This method is used to get the content source by id.
 	 * 
-	 * @param request {@link GetContentSourceByIdRequest}
+	 * Parameters @param request {@link GetContentSourceByIdRequest}
 	 * @return {@link GetContentSourceByIdResponse}
 	 */
 	public GetContentSourceByIdResponse getContentSourcesById(@NonNull GetContentSourceByIdRequest request) {
@@ -602,7 +602,7 @@ public class SearchUnifyClient {
 	/**
 	 * This method is used to get the content source object and fields by id.
 	 * 
-	 * @param request {@link GetContentSourceObjectAndFieldsRequest}
+	 * Parameters @param request {@link GetContentSourceObjectAndFieldsRequest}
 	 * @return {@link GetContentSourceObjectAndFieldsResponse}
 	 */
 	public GetContentSourceObjectAndFieldsResponse getContentSourceObjectAndFields(
@@ -619,7 +619,7 @@ public class SearchUnifyClient {
 	/**
 	 * This method is used to get the content source object and fields by id.
 	 * 
-	 * @param request {@link GetAllDocumentInContentSourceRequest}
+	 * Parameters @param request {@link GetAllDocumentInContentSourceRequest}
 	 * @return {@link GetAllDocumentInContentSourceResponse}
 	 */
 	public GetAllDocumentInContentSourceResponse getAllDocumentInContentSource(
@@ -641,7 +641,7 @@ public class SearchUnifyClient {
 	 * index. The changes are reflected in your index. This call does not alter data
 	 * on your content source.
 	 * 
-	 * @param request {@link UpdateDocumentRequest}
+	 * Parameters @param request {@link UpdateDocumentRequest}
 	 * @return {@link UpdateDocumentResponse}
 	 */
 	public UpdateDocumentResponse updateDocument(@NonNull UpdateDocumentRequest request) {
@@ -661,7 +661,7 @@ public class SearchUnifyClient {
 	/**
 	 * This method is used to add one or more documents to your search index.
 	 * 
-	 * @param request {@link BulkUploadDocumentRequest}
+	 * Parameters @param request {@link BulkUploadDocumentRequest}
 	 * @return {@link BulkUploadDocumentResponse}
 	 */
 	public BulkUploadDocumentResponse bulkUploadDocuments(@NonNull BulkUploadDocumentRequest request) {

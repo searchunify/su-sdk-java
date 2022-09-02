@@ -21,8 +21,8 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
- * @author ankur
- * @crated 19-Mar-2021
+ * This class is @author ankur
+ * This class is created at 19-Mar-2021
  */
 public class RequestManager {
 
@@ -36,10 +36,10 @@ public class RequestManager {
 	 * This method is used to perform the rest request based on the parameters sent
 	 * to it.
 	 * 
-	 * @param <R  extends SearchUnifyRequest>
-	 * @param T   extends SearchUnifyResponse
-	 * @param req
-	 * @param clz
+	 * Parameters @param <R  extends SearchUnifyRequest>
+	 * Parameters @param T   extends SearchUnifyResponse
+	 * Parameters @param req
+	 * Parameters @param clz
 	 * @return <T extends SearchUnifyResponse>
 	 */
 	public <R extends SearchUnifyRequest, T extends SearchUnifyResponse> T performRequest(R req, Class<T> clz) {
@@ -63,8 +63,8 @@ public class RequestManager {
 	/**
 	 * This method is used to build the request body, headers and query parameters.
 	 * 
-	 * @param <R>
-	 * @param req
+	 * Parameters @param <R>
+	 * Parameters @param req
 	 * @return {@link Request}
 	 */
 	private <R extends SearchUnifyRequest> Request buildRequest(R req) {
@@ -78,8 +78,8 @@ public class RequestManager {
 	/**
 	 * This method is used to create the context.
 	 * 
-	 * @param <R>
-	 * @param req
+	 * Parameters @param <R>
+	 * Parameters @param req
 	 * @return {@link HttpUrl}
 	 */
 	private <R extends SearchUnifyRequest> HttpUrl constructUrl(R req) {
@@ -99,9 +99,9 @@ public class RequestManager {
 	/**
 	 * This method will parse the headers map and add it to the request.
 	 * 
-	 * @param <R>
-	 * @param requestBuilder
-	 * @param req
+	 * Parameters @param <R>
+	 * Parameters @param requestBuilder
+	 * Parameters @param req
 	 */
 	private <R extends SearchUnifyRequest> void addHeaders(final Request.Builder requestBuilder, R req) {
 		requestBuilder.addHeader("User-Agent", SearchUnifyConstant.SEARCHUNIFY_USER_AGENT);
@@ -122,8 +122,8 @@ public class RequestManager {
 	 * This method is used to parse the request object to the JSON and map it with
 	 * request body.
 	 * 
-	 * @param <R>
-	 * @param req
+	 * Parameters @param <R>
+	 * Parameters @param req
 	 * @return {@link RequestBody}
 	 */
 	private <R extends SearchUnifyRequest> RequestBody constructRequestBody(R req) {
@@ -142,11 +142,11 @@ public class RequestManager {
 	 * This method is used to perform the rest request based on the parameters sent
 	 * to it.
 	 * 
-	 * @param context
-	 * @param method
-	 * @param headers
-	 * @param parameters
-	 * @param body
+	 * Parameters @param context
+	 * Parameters @param method
+	 * Parameters @param headers
+	 * Parameters @param parameters
+	 * Parameters @param body
 	 * @return {@link String}
 	 */
 	public String performRequest(String context, HttpMethod method, Map<String, String> headers,
@@ -172,11 +172,11 @@ public class RequestManager {
 	/**
 	 * This method is used to build the request body, headers and query parameters.
 	 * 
-	 * @param context
-	 * @param method
-	 * @param headers
-	 * @param parameters
-	 * @param body
+	 * Parameters @param context
+	 * Parameters @param method
+	 * Parameters @param headers
+	 * Parameters @param parameters
+	 * Parameters @param body
 	 * @return {@link Request}
 	 */
 	private Request buildRequest(String context, HttpMethod method, Map<String, String> headers,
@@ -195,8 +195,8 @@ public class RequestManager {
 	/**
 	 * This method is used to create the context.
 	 * 
-	 * @param context
-	 * @param parameters
+	 * Parameters @param context
+	 * Parameters @param parameters
 	 * @return {@link HttpUrl}
 	 */
 	private HttpUrl constructUrl(String context, Map<String, String> parameters) {
@@ -212,8 +212,8 @@ public class RequestManager {
 	/**
 	 * This method will parse the headers map and add it to the request.
 	 * 
-	 * @param requestBuilder
-	 * @param headers
+	 * Parameters @param requestBuilder
+	 * Parameters @param headers
 	 */
 	private void addHeaders(final Request.Builder requestBuilder, Map<String, String> headers) {
 		requestBuilder.addHeader("User-Agent", SearchUnifyConstant.SEARCHUNIFY_USER_AGENT);
@@ -234,9 +234,9 @@ public class RequestManager {
 	 * This method is used to parse the request object to the JSON and map it with
 	 * request body.
 	 * 
-	 * @param method
-	 * @param body
-	 * @param contentType
+	 * Parameters @param method
+	 * Parameters @param body
+	 * Parameters @param contentType
 	 * @return {@link RequestBody}
 	 */
 	private RequestBody constructRequestBody(HttpMethod method, String body, Media contentType) {

@@ -4,14 +4,14 @@
 package com.searchunify.sdk.constants;
 
 /**
- * @author ankur
- * @crated 22-Mar-2021
+ * This class is @author ankur
+ * This class is created at 22-Mar-2021
  */
 public enum HttpMethod {
 	GET, PUT, POST, DELETE;
 
 	/**
-	 * @param stringValue
+	 * Parameters @param stringValue
 	 * @return {@link HttpMethod}
 	 */
 	public static HttpMethod fromString(final String stringValue) {

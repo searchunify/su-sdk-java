@@ -15,8 +15,8 @@ import com.searchunify.sdk.dtos.SearchUnifyRequest;
 import com.searchunify.sdk.exceptions.SearchUnifyException;
 
 /**
- * @author ankur
- * @crated 22-Mar-2021
+ * This class is @author ankur
+ * This class is created at 22-Mar-2021
  */
 public final class JsonUtils {
 
@@ -29,7 +29,7 @@ public final class JsonUtils {
 	/**
 	 * This method is used to convert object to JSON.
 	 * 
-	 * @param obj
+	 * Parameters @param obj
 	 * @return {@link String}
 	 */
 	public static String toJsonString(final Object obj) {
@@ -47,8 +47,8 @@ public final class JsonUtils {
 	/**
 	 * This method is used to convert the JSON to the POJO.
 	 * 
-	 * @param json
-	 * @param Class<T> clz
+	 * Parameters @param json
+	 * Parameters @param Class<T> clz
 	 * @return T
 	 */
 	public static <T> T jsonToObject(final String json, Class<T> clz) {
@@ -67,7 +67,7 @@ public final class JsonUtils {
 	/**
 	 * This method is used to check if the string is valid JSON or not.
 	 * 
-	 * @param json
+	 * Parameters @param json
 	 * @return {@link Boolean}
 	 * @throws SearchUnifyException
 	 */
@@ -85,9 +85,9 @@ public final class JsonUtils {
 	/**
 	 * This method is used to convert the map object to a pojo.
 	 * 
-	 * @param <T>
-	 * @param map
-	 * @param clz
+	 * Parameters @param <T>
+	 * Parameters @param map
+	 * Parameters @param clz
 	 * @return T
 	 */
 	public static <T> T convertMapToObject(Map<String, Object> map, Class<T> clz) {
@@ -102,8 +102,8 @@ public final class JsonUtils {
 	/**
 	 * This method is used to convert POJO to {@link Map}.
 	 * 
-	 * @param <R>
-	 * @param request
+	 * Parameters @param <R>
+	 * Parameters @param request
 	 * @return Map<String, String>
 	 */
 	public static <R extends SearchUnifyRequest> Map<String, String> convertPojoToMap(R request) {

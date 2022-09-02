@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * @author ankur
- * @crated 22-Mar-2021
+ * This class is @author ankur
+ * This class is created at 22-Mar-2021
  */
 @Getter
 @Setter
