@@ -19,7 +19,7 @@ The recommended way to use the SearchUnify SDK for Java in your project is to co
   <dependency>
     <groupId>com.searchunify</groupId>
     <artifactId>su-sdk</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
   </dependency>
 </dependencies>
 ```
