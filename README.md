@@ -47,7 +47,8 @@ The access token will expire after 4 hours and you need to refresh that.
 ## Documentation
 Please refer to the SearchUnify developer guide to use the SDK. https://docs-dev.searchunify.com/Content/Developer-Guides/SDKs-Java.htm
 
-The documentations are in review phase, we will update the https://docs.searchunify.com link once its's final. Sorry for any BUGS 🐞.
+The documentation is in review and might contain bugs🐞, we will update the link on https://docs.searchunify.com once its's final.
+
 
 ## License
 
