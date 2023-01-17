@@ -16,6 +16,6 @@ public class SearchUnifyResponse {
 
 	private boolean status = true;
 
-	private String message;
+	private String message = "API Response.";
 
 }

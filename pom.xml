@@ -3,7 +3,7 @@
 
 	<groupId>com.searchunify</groupId>
 	<artifactId>su-sdk</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>su-sdk-java</name>
@@ -47,7 +47,7 @@
 		<lombok-version>1.18.22</lombok-version>
 		<jackson-version>2.12.2</jackson-version>
 		<junit-version>4.11</junit-version>
-		<okhttp-version>3.2.0</okhttp-version>
+		<okhttp-version>4.10.0</okhttp-version>
 		<log4j-version>2.14.1</log4j-version>
 		<source-plugin-version>3.2.1</source-plugin-version>
 		<doclint>none</doclint>

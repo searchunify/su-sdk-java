@@ -14,6 +14,8 @@ import com.searchunify.sdk.dtos.SearchUnifyResponse;
 import com.searchunify.sdk.exceptions.SearchUnifyException;
 import com.searchunify.sdk.utils.JsonUtils;
 
+import okhttp3.FormBody;
+import okhttp3.FormBody.Builder;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -36,10 +38,11 @@ public class RequestManager {
 	 * This method is used to perform the rest request based on the parameters sent
 	 * to it.
 	 * 
-	 * Parameters @param <R  extends SearchUnifyRequest>
-	 * Parameters @param T   extends SearchUnifyResponse
+	 * Parameters @param <R extends SearchUnifyRequest>
+	 * Parameters @param T extends SearchUnifyResponse
 	 * Parameters @param req
 	 * Parameters @param clz
+	 * 
 	 * @return <T extends SearchUnifyResponse>
 	 */
 	public <R extends SearchUnifyRequest, T extends SearchUnifyResponse> T performRequest(R req, Class<T> clz) {
@@ -65,6 +68,7 @@ public class RequestManager {
 	 * 
 	 * Parameters @param <R>
 	 * Parameters @param req
+	 * 
 	 * @return {@link Request}
 	 */
 	private <R extends SearchUnifyRequest> Request buildRequest(R req) {
@@ -80,6 +84,7 @@ public class RequestManager {
 	 * 
 	 * Parameters @param <R>
 	 * Parameters @param req
+	 * 
 	 * @return {@link HttpUrl}
 	 */
 	private <R extends SearchUnifyRequest> HttpUrl constructUrl(R req) {
@@ -124,6 +129,7 @@ public class RequestManager {
 	 * 
 	 * Parameters @param <R>
 	 * Parameters @param req
+	 * 
 	 * @return {@link RequestBody}
 	 */
 	private <R extends SearchUnifyRequest> RequestBody constructRequestBody(R req) {
@@ -132,7 +138,8 @@ public class RequestManager {
 			String jsonString = null;
 			// System.out.println(Runtime.getRuntime().freeMemory());
 			jsonString = JsonUtils.toJsonString(req);
-			requestBody = RequestBody.create(SearchUnifyConstant.MEDIA_APPLICATION_JSON, jsonString);
+
+			requestBody = RequestBody.create(jsonString, SearchUnifyConstant.MEDIA_APPLICATION_JSON);
 		}
 
 		return requestBody;
@@ -147,11 +154,12 @@ public class RequestManager {
 	 * Parameters @param headers
 	 * Parameters @param parameters
 	 * Parameters @param body
+	 * 
 	 * @return {@link String}
 	 */
-	public String performRequest(String context, HttpMethod method, Map<String, String> headers,
-			Map<String, String> parameters, String body) {
-		Request request = buildRequest(context, method, headers, parameters, body);
+	public String performRequest(String context, HttpMethod method, Map<String, String> headers, Map<String, String> parameters,
+			Map<String, String> formData) {
+		Request request = buildRequest(context, method, headers, parameters, formData);
 		String response = null;
 		try {
 			Response res = this.httpClient.newCall(request).execute();
@@ -177,10 +185,11 @@ public class RequestManager {
 	 * Parameters @param headers
 	 * Parameters @param parameters
 	 * Parameters @param body
+	 * 
 	 * @return {@link Request}
 	 */
-	private Request buildRequest(String context, HttpMethod method, Map<String, String> headers,
-			Map<String, String> parameters, String body) {
+	private Request buildRequest(String context, HttpMethod method, Map<String, String> headers, Map<String, String> parameters,
+			Map<String, String> body) {
 		Request.Builder requestBuilder = new Request.Builder();
 		requestBuilder.url(this.constructUrl(context, parameters));
 		this.addHeaders(requestBuilder, headers);
@@ -197,6 +206,7 @@ public class RequestManager {
 	 * 
 	 * Parameters @param context
 	 * Parameters @param parameters
+	 * 
 	 * @return {@link HttpUrl}
 	 */
 	private HttpUrl constructUrl(String context, Map<String, String> parameters) {
@@ -237,16 +247,22 @@ public class RequestManager {
 	 * Parameters @param method
 	 * Parameters @param body
 	 * Parameters @param contentType
+	 * 
 	 * @return {@link RequestBody}
 	 */
-	private RequestBody constructRequestBody(HttpMethod method, String body, Media contentType) {
+	private RequestBody constructRequestBody(HttpMethod method, Map<String, String> body, Media contentType) {
 		RequestBody requestBody = null;
 		if (null != method && (method == HttpMethod.POST || method == HttpMethod.PUT)) {
 			if (contentType.equals(Media.FORM_URLENCODED)) {
-				requestBody = RequestBody.create(SearchUnifyConstant.MEDIA_FORM_URLENCODED, body);
+				Builder formBuilder = new FormBody.Builder();
+				for (Map.Entry<String, String> entry : body.entrySet()) {
+					formBuilder.add(entry.getKey(), entry.getValue());
+				}
+				// requestBody = FormBody.create(body, SearchUnifyConstant.MEDIA_FORM_URLENCODED);
+				requestBody = formBuilder.build();
 			} else {
-				JsonUtils.isValidJSON(body);
-				requestBody = RequestBody.create(SearchUnifyConstant.MEDIA_APPLICATION_JSON, body);
+				// JsonUtils.isValidJSON(body);
+				requestBody = RequestBody.create(JsonUtils.toJsonString(body), SearchUnifyConstant.MEDIA_APPLICATION_JSON);
 			}
 		}
 		return requestBody;

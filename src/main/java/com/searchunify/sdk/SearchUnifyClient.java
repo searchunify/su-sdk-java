@@ -111,8 +111,8 @@ public class SearchUnifyClient {
 	 * Parameters @param secret
 	 * Parameters @param baseContext
 	 */
-	public SearchUnifyClient(@NonNull String key, @NonNull String secret, @NonNull String baseContext,
-			@NonNull String username, @NonNull String password, String grantType) {
+	public SearchUnifyClient(@NonNull String key, @NonNull String secret, @NonNull String baseContext, @NonNull String username,
+			@NonNull String password, String grantType) {
 		this.requestManager = new RequestManager();
 		this.secret = secret;
 		this.key = key;
@@ -133,6 +133,7 @@ public class SearchUnifyClient {
 	 * 
 	 * Parameters @param <R>
 	 * Parameters @param request
+	 * 
 	 * @return R
 	 */
 	private <R extends SearchUnifyRequest> R addAuthHeader(@NonNull R request) {
@@ -151,6 +152,7 @@ public class SearchUnifyClient {
 	 * form URL encoded way.
 	 * 
 	 * Parameters @param request {@link GenerateTokenRequest}
+	 * 
 	 * @return {@link GenerateTokenResponse}
 	 */
 	public GenerateTokenResponse generateAccessToken(@NonNull GenerateTokenRequest request) {
@@ -168,15 +170,19 @@ public class SearchUnifyClient {
 		headers.put(SearchUnifyConstant.CONTENT_TYPE, Media.FORM_URLENCODED.toString());
 		request.setHeaders(headers);
 		// Set URL encoded body
-		StringBuilder builder = new StringBuilder();
-		builder.append("grant_type=" + this.grantType + "&");
-		builder.append("username=" + this.username + "&");
-		builder.append("password=" + this.password);
+		// StringBuilder builder = new StringBuilder();
+		// builder.append("grant_type=" + this.grantType + "&");
+		// builder.append("username=" + this.username + "&");
+		// builder.append("password=" + this.password);
+		Map<String, String> formData = new HashMap<String, String>();
+		formData.put("grant_type", this.grantType);
+		formData.put("username", this.username);
+		formData.put("password", this.password);
 		// Set other properties
 		request.setMethod(HttpMethod.POST);
 		request.setContext(baseContext + SearchUnifyConstant.GENERATE_ACCESS_TOKEN);
-		String result = requestManager.performRequest(baseContext + SearchUnifyConstant.GENERATE_ACCESS_TOKEN,
-				HttpMethod.POST, headers, null, builder.toString());
+		String result = requestManager.performRequest(baseContext + SearchUnifyConstant.GENERATE_ACCESS_TOKEN, HttpMethod.POST, headers,
+				null, formData);
 		GenerateTokenResponse response = JsonUtils.jsonToObject(result, GenerateTokenResponse.class);
 		return response;
 	}
@@ -185,6 +191,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the tile data from SearchUnify analytics.
 	 * 
 	 * Parameters @param {@link TileDataRequest}
+	 * 
 	 * @return {@link TileDataResponse}
 	 */
 	public TileDataResponse getTileData(@NonNull TileDataRequest request) {
@@ -200,6 +207,7 @@ public class SearchUnifyClient {
 	 * analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchSummaryChartRequest}
+	 * 
 	 * @return {@link GetSearchSummaryChartResponse}
 	 */
 	public GetSearchSummaryChartResponse getSearchSummaryChart(@NonNull GetSearchSummaryChartRequest request) {
@@ -215,6 +223,7 @@ public class SearchUnifyClient {
 	 * analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchQueryAllRequest}
+	 * 
 	 * @return {@link GetSearchQueryAllResponse}
 	 */
 	public GetSearchQueryAllResponse getSearchQueryAll(@NonNull GetSearchQueryAllRequest request) {
@@ -232,10 +241,10 @@ public class SearchUnifyClient {
 	 * SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchQueryWithResultsRequest}
+	 * 
 	 * @return {@link GetSearchQueryWithResultsResponse}
 	 */
-	public GetSearchQueryWithResultsResponse getSearchQueryWithResults(
-			@NonNull GetSearchQueryWithResultsRequest request) {
+	public GetSearchQueryWithResultsResponse getSearchQueryWithResults(@NonNull GetSearchQueryWithResultsRequest request) {
 		logger.debug("Base context is {}", baseContext);
 		request = addAuthHeader(request);
 		request.setMethod(HttpMethod.GET);
@@ -250,10 +259,10 @@ public class SearchUnifyClient {
 	 * SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchQueryWithNoClicksRequest}
+	 * 
 	 * @return {@link GetSearchQueryWithResultsResponse}
 	 */
-	public GetSearchQueryWithNoClicksResponse getSearchQueryWithNoClicks(
-			@NonNull GetSearchQueryWithNoClicksRequest request) {
+	public GetSearchQueryWithNoClicksResponse getSearchQueryWithNoClicks(@NonNull GetSearchQueryWithNoClicksRequest request) {
 		logger.debug("Base context is {}", baseContext);
 		request = addAuthHeader(request);
 		request.setMethod(HttpMethod.GET);
@@ -268,10 +277,10 @@ public class SearchUnifyClient {
 	 * SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchQueryWithoutResultsRequest}
+	 * 
 	 * @return {@link GetSearchQueryWithoutResultsResponse}
 	 */
-	public GetSearchQueryWithoutResultsResponse getSearchQueryWithoutResults(
-			@NonNull GetSearchQueryWithoutResultsRequest request) {
+	public GetSearchQueryWithoutResultsResponse getSearchQueryWithoutResults(@NonNull GetSearchQueryWithoutResultsRequest request) {
 		logger.debug("Base context is {}", baseContext);
 		request = addAuthHeader(request);
 		request.setMethod(HttpMethod.GET);
@@ -286,6 +295,7 @@ public class SearchUnifyClient {
 	 * analytics.
 	 * 
 	 * Parameters @param request {@link SearchQueryHistogramRequest}
+	 * 
 	 * @return {@link SearchQueryHistogramResponse}
 	 */
 	public SearchQueryHistogramResponse searchQueryHistogram(@NonNull SearchQueryHistogramRequest request) {
@@ -301,10 +311,10 @@ public class SearchUnifyClient {
 	 * analytics.
 	 * 
 	 * Parameters @param request {@link SearchQueryMissedHistogramRequest}
+	 * 
 	 * @return {@link SearchQueryMissedHistogramResponse}
 	 */
-	public SearchQueryMissedHistogramResponse searchQueryMissedHistogram(
-			@NonNull SearchQueryMissedHistogramRequest request) {
+	public SearchQueryMissedHistogramResponse searchQueryMissedHistogram(@NonNull SearchQueryMissedHistogramRequest request) {
 		logger.debug("Base context is {}", baseContext);
 		request = addAuthHeader(request);
 		request.setMethod(HttpMethod.POST);
@@ -317,10 +327,10 @@ public class SearchUnifyClient {
 	 * SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link SearchSessionByCaseUidAuthRequest}
+	 * 
 	 * @return {@link SearchSessionByCaseUidAuthResponse}
 	 */
-	public SearchSessionByCaseUidAuthResponse searchSessionByCaseUidAuth(
-			@NonNull SearchSessionByCaseUidAuthRequest request) {
+	public SearchSessionByCaseUidAuthResponse searchSessionByCaseUidAuth(@NonNull SearchSessionByCaseUidAuthRequest request) {
 		logger.debug("Base context is {}", baseContext);
 		request = addAuthHeader(request);
 		request.setMethod(HttpMethod.POST);
@@ -333,6 +343,7 @@ public class SearchUnifyClient {
 	 * analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchConverionAllRequest}
+	 * 
 	 * @return {@link GetSearchConverionAllResponse}
 	 */
 	public GetSearchConverionAllResponse getSearchConverionAll(@NonNull GetSearchConverionAllRequest request) {
@@ -350,6 +361,7 @@ public class SearchUnifyClient {
 	 * page from SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchConverionNotOnFirstPageRequest}
+	 * 
 	 * @return {@link GetSearchConverionNotOnFirstPageResponse}
 	 */
 	public GetSearchConverionNotOnFirstPageResponse getSearchConverionNotOnFirstPage(
@@ -368,10 +380,10 @@ public class SearchUnifyClient {
 	 * SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchConverionWithFilterRequest}
+	 * 
 	 * @return {@link GetSearchConverionWithFilterResponse}
 	 */
-	public GetSearchConverionWithFilterResponse getSearchConverionWithFilter(
-			@NonNull GetSearchConverionWithFilterRequest request) {
+	public GetSearchConverionWithFilterResponse getSearchConverionWithFilter(@NonNull GetSearchConverionWithFilterRequest request) {
 		logger.debug("Base context is {}", baseContext);
 		request = addAuthHeader(request);
 		request.setMethod(HttpMethod.GET);
@@ -386,10 +398,10 @@ public class SearchUnifyClient {
 	 * SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchConverionBySessionIdRequest}
+	 * 
 	 * @return {@link GetSearchConverionBySessionIdResponse}
 	 */
-	public GetSearchConverionBySessionIdResponse getSearchConverionBySessionId(
-			@NonNull GetSearchConverionBySessionIdRequest request) {
+	public GetSearchConverionBySessionIdResponse getSearchConverionBySessionId(@NonNull GetSearchConverionBySessionIdRequest request) {
 		logger.debug("Base context is {}", baseContext);
 		request = addAuthHeader(request);
 		request.setMethod(HttpMethod.GET);
@@ -409,6 +421,7 @@ public class SearchUnifyClient {
 	 * become help articles from SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link DiscussionsReadyToBecomeArticlesRequest}
+	 * 
 	 * @return {@link DiscussionsReadyToBecomeArticlesResponse}
 	 */
 	public DiscussionsReadyToBecomeArticlesResponse discussionsReadyToBecomeArticles(
@@ -425,6 +438,7 @@ public class SearchUnifyClient {
 	 * articles from SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link ArticlesCreatedCasesRequest}
+	 * 
 	 * @return {@link ArticlesCreatedCasesResponse}
 	 */
 	public ArticlesCreatedCasesResponse articlesCreatedCases(@NonNull ArticlesCreatedCasesRequest request) {
@@ -440,6 +454,7 @@ public class SearchUnifyClient {
 	 * cases from SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link ArticlesDeflectedCaseRequest}
+	 * 
 	 * @return {@link ArticlesDeflectedCaseResponse}
 	 */
 	public ArticlesDeflectedCaseResponse articlesDeflectedCase(@NonNull ArticlesDeflectedCaseRequest request) {
@@ -455,6 +470,7 @@ public class SearchUnifyClient {
 	 * to cases from SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link ArticlesAttachedToCasesRequest}
+	 * 
 	 * @return {@link ArticlesAttachedToCasesResponse}
 	 */
 	public ArticlesAttachedToCasesResponse articlesAttachedToCases(@NonNull ArticlesAttachedToCasesRequest request) {
@@ -472,6 +488,7 @@ public class SearchUnifyClient {
 	 * analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchesWithNoClicksRequest}
+	 * 
 	 * @return {@link GetSearchesWithNoClicksResponse}
 	 */
 	public GetSearchesWithNoClicksResponse getSearchesWithNoClicks(@NonNull GetSearchesWithNoClicksRequest request) {
@@ -489,6 +506,7 @@ public class SearchUnifyClient {
 	 * SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchesInAllSessionRequest}
+	 * 
 	 * @return {@link GetSearchesInAllSessionResponse}
 	 */
 	public GetSearchesInAllSessionResponse getSearchesInAllSession(@NonNull GetSearchesInAllSessionRequest request) {
@@ -506,10 +524,10 @@ public class SearchUnifyClient {
 	 * SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link GetSearchSessionBySessionIdRequest}
+	 * 
 	 * @return {@link GetSearchSessionBySessionIdResponse}
 	 */
-	public GetSearchSessionBySessionIdResponse getSearchSessionBySessionId(
-			@NonNull GetSearchSessionBySessionIdRequest request) {
+	public GetSearchSessionBySessionIdResponse getSearchSessionBySessionId(@NonNull GetSearchSessionBySessionIdRequest request) {
 		logger.debug("Base context is {}", baseContext);
 		request = addAuthHeader(request);
 		request.setMethod(HttpMethod.GET);
@@ -529,6 +547,7 @@ public class SearchUnifyClient {
 	 * SearchUnify analytics.
 	 * 
 	 * Parameters @param request {@link SearchQueryKcsSupportRequest}
+	 * 
 	 * @return {@link SearchQueryKcsSupportResponse}
 	 */
 	public SearchQueryKcsSupportResponse searchQueryKcsSupport(@NonNull SearchQueryKcsSupportRequest request) {
@@ -544,6 +563,7 @@ public class SearchUnifyClient {
 	 * analytics.
 	 * 
 	 * Parameters @param request {@link SearchSessionByCaseUidRequest}
+	 * 
 	 * @return {@link SearchSessionByCaseUidResponse}
 	 */
 	public SearchSessionByCaseUidResponse searchSessionByCaseUid(@NonNull SearchSessionByCaseUidRequest request) {
@@ -558,6 +578,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the search results based on the queries.
 	 * 
 	 * Parameters @param request {@link SearchRequest}
+	 * 
 	 * @return {@link SearchResponse}
 	 */
 	public SearchResponse search(@NonNull SearchRequest request) {
@@ -573,6 +594,7 @@ public class SearchUnifyClient {
 	 * This method is used to get all the content sources.
 	 * 
 	 * Parameters @param request {@link GetAllContentSourcesRequest}
+	 * 
 	 * @return {@link GetAllContentSourcesResponse}
 	 */
 	public GetAllContentSourcesResponse getAllContentSources(@NonNull GetAllContentSourcesRequest request) {
@@ -587,6 +609,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the content source by id.
 	 * 
 	 * Parameters @param request {@link GetContentSourceByIdRequest}
+	 * 
 	 * @return {@link GetContentSourceByIdResponse}
 	 */
 	public GetContentSourceByIdResponse getContentSourcesById(@NonNull GetContentSourceByIdRequest request) {
@@ -603,6 +626,7 @@ public class SearchUnifyClient {
 	 * This method is used to get the content source object and fields by id.
 	 * 
 	 * Parameters @param request {@link GetContentSourceObjectAndFieldsRequest}
+	 * 
 	 * @return {@link GetContentSourceObjectAndFieldsResponse}
 	 */
 	public GetContentSourceObjectAndFieldsResponse getContentSourceObjectAndFields(
@@ -620,10 +644,10 @@ public class SearchUnifyClient {
 	 * This method is used to get the content source object and fields by id.
 	 * 
 	 * Parameters @param request {@link GetAllDocumentInContentSourceRequest}
+	 * 
 	 * @return {@link GetAllDocumentInContentSourceResponse}
 	 */
-	public GetAllDocumentInContentSourceResponse getAllDocumentInContentSource(
-			@NonNull GetAllDocumentInContentSourceRequest request) {
+	public GetAllDocumentInContentSourceResponse getAllDocumentInContentSource(@NonNull GetAllDocumentInContentSourceRequest request) {
 		logger.debug("Base context is {}", baseContext);
 		request = addAuthHeader(request);
 		request.setMethod(HttpMethod.GET);
@@ -642,6 +666,7 @@ public class SearchUnifyClient {
 	 * on your content source.
 	 * 
 	 * Parameters @param request {@link UpdateDocumentRequest}
+	 * 
 	 * @return {@link UpdateDocumentResponse}
 	 */
 	public UpdateDocumentResponse updateDocument(@NonNull UpdateDocumentRequest request) {
@@ -662,6 +687,7 @@ public class SearchUnifyClient {
 	 * This method is used to add one or more documents to your search index.
 	 * 
 	 * Parameters @param request {@link BulkUploadDocumentRequest}
+	 * 
 	 * @return {@link BulkUploadDocumentResponse}
 	 */
 	public BulkUploadDocumentResponse bulkUploadDocuments(@NonNull BulkUploadDocumentRequest request) {
