@@ -25,5 +25,11 @@ public class SearchSessionByCaseUidRequest extends SearchUnifyRequest {
 
 	@NonNull
 	private String caseUID;
+	
+	@NonNull
+	private String count;
+	
+	@NonNull
+	private String internalUser;
 
 }

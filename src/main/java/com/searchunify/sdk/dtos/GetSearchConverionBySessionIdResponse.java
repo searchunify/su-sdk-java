@@ -3,11 +3,12 @@
  */
 package com.searchunify.sdk.dtos;
 
-import java.util.Map;
+import java.util.List;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * This class is @author ankur
@@ -16,7 +17,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class GetSearchConverionBySessionIdResponse extends SearchUnifyResponse {
-
-	private Map<String, Object> data;
+	
+	private List<GetSearchConverionBySessionIdData> data;
+	
+	@Getter
+	@ToString
+	public static class GetSearchConverionBySessionIdData{
+		
+		private String doc;
+		
+		private String count;
+		
+	}
 }

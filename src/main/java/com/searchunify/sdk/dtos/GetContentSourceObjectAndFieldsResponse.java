@@ -3,11 +3,12 @@
  */
 package com.searchunify.sdk.dtos;
 
-import java.util.Map;
+import java.util.List;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * This class is @author ankur
@@ -16,7 +17,48 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class GetContentSourceObjectAndFieldsResponse extends SearchUnifyResponse {
 
-	private Map<String, Object> data;
+	private List<GetContentSourceObjectAndFieldsItems> items;
+
+	@Getter
+	@ToString
+	public static class GetContentSourceObjectAndFieldsItems {
+		
+		private GetContentSourceObjectAndFieldsObject object;
+		
+		@Getter
+		@ToString
+		public static class GetContentSourceObjectAndFieldsObject{
+			
+			private String id;
+			
+			private String name;
+			
+			private String label;
+			
+			private List<GetContentSourceObjectAndFieldsObjectFields> fields;
+			
+			@Getter
+			@ToString
+			public static class GetContentSourceObjectAndFieldsObjectFields{
+				
+				private String id;
+				
+				private String name;
+				
+				private String label;
+				
+				private String type;
+				
+				private String isFilterable;
+				
+				private String isSearchable;
+				
+			}
+		}
+		
+	}
+
 }

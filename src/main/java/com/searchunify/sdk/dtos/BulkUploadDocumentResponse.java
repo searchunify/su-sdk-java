@@ -3,11 +3,14 @@
  */
 package com.searchunify.sdk.dtos;
 
-import java.util.Map;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * This class is @author ankur
@@ -16,7 +19,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class BulkUploadDocumentResponse extends SearchUnifyResponse {
-
-	private Map<String, Object> data;
+	
+	private String statusMsg;
+	
+	private List<String> createdDocIds;
+	
+	private List<String> errorDocIds;
+	
+	private List<String> updatedDocIds;
 }

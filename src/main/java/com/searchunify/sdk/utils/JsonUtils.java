@@ -23,7 +23,8 @@ public final class JsonUtils {
 	public static final ObjectMapper mapper = new ObjectMapper()
 			.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
 			.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
-			.setSerializationInclusion(Include.NON_NULL);
+			.setSerializationInclusion(Include.NON_NULL)
+			.setSerializationInclusion(Include.NON_EMPTY);
 	// .registerModule(new AfterburnerModule());
 
 	/**

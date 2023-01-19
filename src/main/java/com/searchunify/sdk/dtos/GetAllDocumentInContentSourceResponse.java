@@ -3,11 +3,10 @@
  */
 package com.searchunify.sdk.dtos;
 
-import java.util.Map;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * This class is @author ankur
@@ -16,7 +15,29 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class GetAllDocumentInContentSourceResponse extends SearchUnifyResponse {
 
-	private Map<String, Object> data;
+	private GetAllDocumentInContentSourceData response;
+
+	@Getter
+	@ToString
+	public static class GetAllDocumentInContentSourceData {
+
+		private String id;
+		
+		private String contentSource;
+		
+		private String object;
+		
+		private Boolean found;
+		
+		private GetAllDocumentInContentSourceSource source;
+		
+		public static class GetAllDocumentInContentSourceSource{
+			
+		}
+		
+	}
+
 }

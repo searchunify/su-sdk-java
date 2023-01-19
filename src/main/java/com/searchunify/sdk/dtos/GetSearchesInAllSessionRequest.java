@@ -27,5 +27,8 @@ public class GetSearchesInAllSessionRequest extends SearchUnifyRequest {
 
 	@NonNull
 	private Integer count;
+	
+	@NonNull
+	private Integer pageNumber;
 
 }

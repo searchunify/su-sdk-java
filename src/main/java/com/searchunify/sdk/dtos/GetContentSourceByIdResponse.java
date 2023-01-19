@@ -8,6 +8,7 @@ import java.util.Map;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * This class is @author ankur
@@ -16,7 +17,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class GetContentSourceByIdResponse extends SearchUnifyResponse {
 
-	private Map<String, Object> data;
+	private long id;
+
+	private String label;
+
+	private String name;
+
+	private String url;
+
+	private long size;
+
 }

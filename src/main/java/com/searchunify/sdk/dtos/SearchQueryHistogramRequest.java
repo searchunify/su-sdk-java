@@ -16,16 +16,15 @@ import lombok.Setter;
 @Setter
 @Builder
 public class SearchQueryHistogramRequest extends SearchUnifyRequest {
-
+	
+	private String uid;
+	
 	@NonNull
-	private String startDate;
-
+	private String from;
+	
 	@NonNull
-	private String endDate;
-
-	private String searchClientId;
-
-	@NonNull
-	private Integer count;
+	private String 	to;
+	
+	private String internalUser;
 
 }

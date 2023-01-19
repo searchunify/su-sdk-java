@@ -28,6 +28,6 @@ public class UpdateDocumentRequest extends SearchUnifyRequest {
 	@NonNull
 	private String documentId;
 
-	@NonNull
+	/* @NonNull */
 	private Map<String, Object> body;
 }

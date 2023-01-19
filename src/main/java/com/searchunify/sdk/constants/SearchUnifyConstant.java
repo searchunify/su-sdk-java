@@ -53,9 +53,11 @@ public class SearchUnifyConstant {
 
 	public static final String GET_SEARCH_CONVERION_WITH_FILTER = "/api/v2/searchConversion/withFilters";
 
-	public static final String GET_SEARCH_CONVERION_BY_SESSION_ID = "/api/v2/searchConversion/bySessionId/{id}";
+	public static final String GET_SEARCH_CONVERION_BY_SESSION_ID = "/api/v2/searchConversion/bySessionsId/{id}";
 
-	public static final String DISCUSSIONS_READY_TO_BECOME_ARTICLES = "/api/v2/searchConversion/discussionsreadytobecomearticles";
+	public static final String DISCUSSIONS_READY_TO_BECOME_ARTICLES ="/api/v2/searchConversion/DiscussionsReadyToBecomeArticles";
+	
+	//public static final String DISCUSSIONS_READY_TO_BECOME_ARTICLES = "/api/v2/searchConversion/discussionsreadytobecomearticles";
 
 	// TODO - Duplicate.
 	public static final String ARTICLES_CREATED_CASES = "/api/v2/conversion/articlesCreatedCases";

@@ -20,12 +20,12 @@ import lombok.Setter;
 @Builder
 public class BulkUploadDocumentRequest extends SearchUnifyRequest {
 
-	// @NonNull
+	@NonNull
 	private String contentSourceId;
 
-	// @NonNull
+	@NonNull
 	private String objectId;
 
-	@NonNull
+	/* @NonNull */
 	private List<Map<String, Object>> bulkData;
 }

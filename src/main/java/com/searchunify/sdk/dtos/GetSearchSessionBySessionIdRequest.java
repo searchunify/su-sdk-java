@@ -26,7 +26,7 @@ public class GetSearchSessionBySessionIdRequest extends SearchUnifyRequest {
 	private String searchClientId;
 
 	@NonNull
-	private Integer count;
+	private String count;
 
 	@NonNull
 	private String sessionId;
