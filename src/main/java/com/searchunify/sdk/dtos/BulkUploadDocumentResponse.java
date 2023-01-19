@@ -5,8 +5,6 @@ package com.searchunify.sdk.dtos;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,12 +19,12 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class BulkUploadDocumentResponse extends SearchUnifyResponse {
-	
+
 	private String statusMsg;
-	
+
 	private List<String> createdDocIds;
-	
+
 	private List<String> errorDocIds;
-	
+
 	private List<String> updatedDocIds;
 }
