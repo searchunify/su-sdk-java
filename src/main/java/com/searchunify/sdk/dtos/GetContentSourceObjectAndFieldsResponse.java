@@ -25,40 +25,40 @@ public class GetContentSourceObjectAndFieldsResponse extends SearchUnifyResponse
 	@Getter
 	@ToString
 	public static class GetContentSourceObjectAndFieldsItems {
-		
+
 		private GetContentSourceObjectAndFieldsObject object;
-		
+
 		@Getter
 		@ToString
-		public static class GetContentSourceObjectAndFieldsObject{
-			
+		public static class GetContentSourceObjectAndFieldsObject {
+
 			private String id;
-			
+
 			private String name;
-			
+
 			private String label;
-			
+
 			private List<GetContentSourceObjectAndFieldsObjectFields> fields;
-			
+
 			@Getter
 			@ToString
-			public static class GetContentSourceObjectAndFieldsObjectFields{
-				
+			public static class GetContentSourceObjectAndFieldsObjectFields {
+
 				private String id;
-				
+
 				private String name;
-				
+
 				private String label;
-				
+
 				private String type;
-				
+
 				private String isFilterable;
-				
+
 				private String isSearchable;
-				
+
 			}
 		}
-		
+
 	}
 
 }

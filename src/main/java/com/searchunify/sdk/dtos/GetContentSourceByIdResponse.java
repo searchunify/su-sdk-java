@@ -3,8 +3,6 @@
  */
 package com.searchunify.sdk.dtos;
 
-import java.util.Map;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

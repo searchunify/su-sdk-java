@@ -19,26 +19,26 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class GetSearchesInAllSessionResponse extends SearchUnifyResponse {
-	
+
 	private List<GetSearchesInAllSessionData> data;
-	
+
 	@Getter
 	@ToString
-	public static class GetSearchesInAllSessionData{
-		
+	public static class GetSearchesInAllSessionData {
+
 		private List<GetSearchesInAllSessionLogs> logs;
-		
+
 		private String sessionId;
-		
+
 		@Getter
 		@ToString
-		public static class GetSearchesInAllSessionLogs{
-			
+		public static class GetSearchesInAllSessionLogs {
+
 			private String query;
-			
+
 			private String count;
 		}
-		
+
 	}
-	
+
 }

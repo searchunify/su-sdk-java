@@ -19,16 +19,16 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class GetSearchQueryWithNoClicksResponse extends SearchUnifyResponse {
-		
+
 	private List<GetSearchQueryWithNoClicksData> data;
-	
+
 	@Getter
 	@ToString
-	public static class GetSearchQueryWithNoClicksData{
-		
+	public static class GetSearchQueryWithNoClicksData {
+
 		private String count;
-		
+
 		private String value;
-		
+
 	}
 }

@@ -19,21 +19,21 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class GetAllContentSourcesResponse extends SearchUnifyResponse {
-	
+
 	List<GetAllContentSources> contentSources;
-	
+
 	@Getter
 	@ToString
-	public static class GetAllContentSources{
-		
+	public static class GetAllContentSources {
+
 		private String id;
-		
+
 		private String label;
-		
+
 		private String name;
-		
+
 		private String url;
-		
+
 	}
-	
+
 }

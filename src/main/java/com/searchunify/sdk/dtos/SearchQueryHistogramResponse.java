@@ -23,41 +23,41 @@ import lombok.ToString;
 public class SearchQueryHistogramResponse extends SearchUnifyResponse {
 
 	private SearchQueryHistogramData data;
-	
+
 	@Getter
 	@ToString
-	public static class SearchQueryHistogramData{
-		
+	public static class SearchQueryHistogramData {
+
 		private List<SearchQueryHistogramSearch> search;
-		
+
 		@JsonProperty("Conversions")
 		private List<SearchQueryHistogramConversion> conversion;
-		
+
 		private String format;
-		
+
 		@Getter
 		@ToString
 		public static class SearchQueryHistogramSearch {
-		
+
 			private long count;
-			
+
 			private String key;
-			
+
 			private String time;
-			
+
 		}
-		
+
 		@Getter
 		@ToString
-		public static class SearchQueryHistogramConversion{
-			
+		public static class SearchQueryHistogramConversion {
+
 			private long count;
-			
+
 			private String key;
-			
+
 			private String time;
-			
+
 		}
 	}
-	
+
 }

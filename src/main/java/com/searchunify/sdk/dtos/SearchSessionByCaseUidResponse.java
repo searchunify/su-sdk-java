@@ -4,6 +4,9 @@
 package com.searchunify.sdk.dtos;
 
 import java.util.List;
+import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,41 +22,33 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class SearchSessionByCaseUidResponse extends SearchUnifyResponse {
-	
+
 	private List<SearchSessionByCaseUidData> data;
-	
+
 	@Getter
 	@ToString
-	public static class SearchSessionByCaseUidData{
-		
+	public static class SearchSessionByCaseUidData {
+
 		private String name;
-		
+
+		@JsonProperty("data")
 		private List<SearchSessionByCaseUidDataData> data;
-		
-		private long totalCount;
-		
+
+		private String totalCount;
+
 		@Getter
 		@ToString
-		public static class SearchSessionByCaseUidDataData{
-			
+		public static class SearchSessionByCaseUidDataData {
+
 			private String start;
-			
+
 			private String end;
-			
-			private long count;
-			
-			private List<SearchSessionByCaseUidDataDoc> doc;
-			
-			@Getter
-			@ToString
-			public static class SearchSessionByCaseUidDataDoc{
-				
-				private String text_entered;
-				
-				private String ts;
-			}
-			
+
+			private String count;
+
+			private List<Map<String,Object>> doc;
+
 		}
-		
+
 	}
 }

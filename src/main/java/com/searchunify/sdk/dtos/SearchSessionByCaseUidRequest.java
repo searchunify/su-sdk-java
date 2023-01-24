@@ -24,12 +24,12 @@ public class SearchSessionByCaseUidRequest extends SearchUnifyRequest {
 	private String endDate;
 
 	@NonNull
-	private String caseUID;
+	private String caseUid;
 	
 	@NonNull
 	private String count;
 	
-	@NonNull
+//	@NonNull
 	private String internalUser;
 
 }

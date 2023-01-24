@@ -318,7 +318,7 @@ public class SearchUnifyClient {
 		logger.debug("Base context is {}", baseContext);
 		request = addAuthHeader(request);
 		request.setMethod(HttpMethod.POST);
-		//request.setContext(baseContext + SearchUnifyConstant.SEARCH_QUERY_HISTOGRAM);
+		// request.setContext(baseContext + SearchUnifyConstant.SEARCH_QUERY_HISTOGRAM);
 		request.setContext(baseContext + SearchUnifyConstant.SEARCH_QUERY_MISSED_HISTOGRAM);
 		return requestManager.performRequest(request, SearchQueryMissedHistogramResponse.class);
 	};
@@ -700,8 +700,8 @@ public class SearchUnifyClient {
 		context = context.replace("{contentSourceId}", request.getContentSourceId()).trim();
 		context = context.replace("{objectId}", request.getObjectId()).trim();
 		// TODO Check this with NonNull
-//		request.setContentSourceId(null);
-//		request.setObjectId(null);
+		// request.setContentSourceId(null);
+		// request.setObjectId(null);
 		request.setContext(baseContext + context);
 		return requestManager.performRequest(request, BulkUploadDocumentResponse.class);
 	};

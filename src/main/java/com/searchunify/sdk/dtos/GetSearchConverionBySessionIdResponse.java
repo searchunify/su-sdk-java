@@ -19,16 +19,16 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class GetSearchConverionBySessionIdResponse extends SearchUnifyResponse {
-	
+
 	private List<GetSearchConverionBySessionIdData> data;
-	
+
 	@Getter
 	@ToString
-	public static class GetSearchConverionBySessionIdData{
-		
+	public static class GetSearchConverionBySessionIdData {
+
 		private String doc;
-		
+
 		private String count;
-		
+
 	}
 }

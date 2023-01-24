@@ -19,7 +19,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class GetSearchQueryWithResultsResponse extends SearchUnifyResponse {
-	
+
 	private List<GetSearchQueryWithResultsData> data;
 
 	@Getter

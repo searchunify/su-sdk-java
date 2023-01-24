@@ -19,17 +19,17 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class SearchQueryMissedHistogramResponse extends SearchUnifyResponse {
-	
+
 	private List<SearchQueryMissedHistogramData> data;
-	
+
 	@Getter
 	@ToString
 	public static class SearchQueryMissedHistogramData {
-		
+
 		private String count;
-		
+
 		private String key;
-		
+
 		private String time;
 	}
 }
