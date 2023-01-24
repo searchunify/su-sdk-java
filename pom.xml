@@ -3,7 +3,7 @@
 
 	<groupId>com.searchunify</groupId>
 	<artifactId>su-sdk</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>jar</packaging>
 
 	<name>su-sdk-java</name>
