@@ -24,6 +24,10 @@ public class DiscussionsReadyToBecomeArticlesRequest extends SearchUnifyRequest 
 	private String endDate;
 
 	@NonNull
-	private Integer count;
+	private String count;
+	
+	private String internalUser;
+	
+	private String searchClientId;
 
 }

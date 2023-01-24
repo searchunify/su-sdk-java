@@ -5,6 +5,7 @@ package com.searchunify.sdk.dtos;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 /**
@@ -16,10 +17,14 @@ import lombok.Setter;
 @Builder
 public class TileDataRequest extends SearchUnifyRequest {
 
+	@NonNull
 	private String from;
 
+	@NonNull
 	private String to;
 
 	private String uid;
+	
+	private String internalUser;
 
 }

@@ -24,6 +24,7 @@ public class SearchRequest extends SearchUnifyRequest {
 
 	private Integer limit;
 
+	@NonNull
 	private String searchString;
 
 	private String email;

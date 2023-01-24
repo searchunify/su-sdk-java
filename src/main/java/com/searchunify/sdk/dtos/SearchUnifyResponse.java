@@ -5,6 +5,7 @@ package com.searchunify.sdk.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * This class is @author ankur
@@ -12,6 +13,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@ToString
 public class SearchUnifyResponse {
 
 	private boolean status = true;

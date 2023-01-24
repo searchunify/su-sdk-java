@@ -16,8 +16,7 @@ public class SearchUnifyConstant {
 	// Media Types
 	public static final MediaType MEDIA_APPLICATION_JSON = MediaType.parse("application/json; charset=utf-8");
 
-	public static final MediaType MEDIA_FORM_URLENCODED = MediaType
-			.parse("application/x-www-form-urlencoded; charset=utf-8");
+	public static final MediaType MEDIA_FORM_URLENCODED = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
 
 	// Headers
 	public static final String CONTENT_TYPE = "Content-Type";
@@ -53,9 +52,9 @@ public class SearchUnifyConstant {
 
 	public static final String GET_SEARCH_CONVERION_WITH_FILTER = "/api/v2/searchConversion/withFilters";
 
-	public static final String GET_SEARCH_CONVERION_BY_SESSION_ID = "/api/v2/searchConversion/bySessionId/{id}";
+	public static final String GET_SEARCH_CONVERION_BY_SESSION_ID = "/api/v2/searchConversion/bySessionsId/{id}";
 
-	public static final String DISCUSSIONS_READY_TO_BECOME_ARTICLES = "/api/v2/searchConversion/discussionsreadytobecomearticles";
+	public static final String DISCUSSIONS_READY_TO_BECOME_ARTICLES = "/api/v2/searchConversion/DiscussionsReadyToBecomeArticles";
 
 	// TODO - Duplicate.
 	public static final String ARTICLES_CREATED_CASES = "/api/v2/conversion/articlesCreatedCases";
@@ -82,7 +81,7 @@ public class SearchUnifyConstant {
 
 	public static final String GET_CONTENT_SOURCE_OBJECT_AND_FIELDS = "/api/v2_cs/contentSource/{id}/objectAndFields";
 
-	public static final String GET_ALL_DOCUMENT_IN_CONTENT_SOURCE = "api/v2_cs/apiData/contentSource/{contentSourceId}/object/{objectId}/document/{id}/get";
+	public static final String GET_ALL_DOCUMENT_IN_CONTENT_SOURCE = "/api/v2_cs/apiData/contentSource/{contentSourceId}/object/{objectId}/document/{id}/get";
 
 	public static final String UPDATE_DOCUMENT = "/api/v2_cs/apiData/contentSource/{contentSourceId}/object/{objectId}/document/{id}/update";
 
